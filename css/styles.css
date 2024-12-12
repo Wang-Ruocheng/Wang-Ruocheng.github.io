@@ -1,0 +1,10 @@
+/* css/styles.css */
+.avatar {
+    width: 270px;
+    height: 350px;
+    object-fit: cover; /* 确保图片内容适应容器大小 */
+  }
+  
+  .rounded {
+    border-radius: 15px; /* 设置圆角 */
+  }
