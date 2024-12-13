@@ -33,6 +33,7 @@ def generate_gallery_html():
                 text-align: center; /* 图片标题居中 */
             }
             .category-title {
+               
                 column-span: all;
                 text-align: center;
                 margin: 20px 0;
@@ -56,7 +57,6 @@ def generate_gallery_html():
         <div class="container mt-5">
             <div class="row justify-content-center">
                 <div class="section-heading col-12 mb-3 text-center">
-                    <h1 class="mb-0">Gallery</h1>
                 </div>
             </div>
             <div class="gallery-container">
@@ -65,7 +65,7 @@ def generate_gallery_html():
     for category in categories_order:
         category_path = os.path.join(gallery_path, category)
         if os.path.isdir(category_path):
-            html_content += f'<div class="category-title">{category}</div>'
+            html_content += '<div class="category-title"></div>'
             for image in os.listdir(category_path):
                 if image.endswith(('jpg', 'jpeg', 'png', 'gif')):
                     image_path = os.path.join(category, image)

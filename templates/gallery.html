@@ -28,6 +28,7 @@
                 text-align: center; /* 图片标题居中 */
             }
             .category-title {
+               
                 column-span: all;
                 text-align: center;
                 margin: 20px 0;
@@ -37,23 +38,30 @@
             .card {
                 border: none; /* 移除卡片边框 */
             }
+            .dark-theme .card {
+                background-color: #333;
+                color: #fff;
+            }
+            .light-theme .card {
+                background-color: #fff;
+                color: #000;
+            }
         </style>
     </head>
     <body>
         <div class="container mt-5">
             <div class="row justify-content-center">
                 <div class="section-heading col-12 mb-3 text-center">
-                    <h1 class="mb-0">Gallery</h1>
                 </div>
             </div>
             <div class="gallery-container">
-    <div class="category-title">family</div>
+    <div class="category-title"></div>
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/family/my grandfather.jpeg" class="card-img-top" alt="my grandfather.jpeg">
+                            <img src="/gallery/Family/My grandfather.jpeg" class="card-img-top" alt="My grandfather.jpeg">
                     
                             <div class="card-body">
-                                <h5 class="card-title">my grandfather</h5>
+                                <h5 class="card-title">My grandfather</h5>
                             </div>
                         
                         </div>
@@ -61,10 +69,10 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/family/my maternal grandfather.jpeg" class="card-img-top" alt="my maternal grandfather.jpeg">
+                            <img src="/gallery/Family/My maternal grandfather.jpeg" class="card-img-top" alt="My maternal grandfather.jpeg">
                     
                             <div class="card-body">
-                                <h5 class="card-title">my maternal grandfather</h5>
+                                <h5 class="card-title">My maternal grandfather</h5>
                             </div>
                         
                         </div>
@@ -72,7 +80,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/family/Nanjing Cangbo Gate, maternal grandfather's hometown.png" class="card-img-top" alt="Nanjing Cangbo Gate, maternal grandfather's hometown.png">
+                            <img src="/gallery/Family/Nanjing Cangbo Gate, maternal grandfather's hometown.png" class="card-img-top" alt="Nanjing Cangbo Gate, maternal grandfather's hometown.png">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Nanjing Cangbo Gate, maternal grandfather's hometown</h5>
@@ -83,10 +91,10 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/family/my parents and little sister.jpg" class="card-img-top" alt="my parents and little sister.jpg">
+                            <img src="/gallery/Family/My parents and little sister.jpg" class="card-img-top" alt="My parents and little sister.jpg">
                     
                             <div class="card-body">
-                                <h5 class="card-title">my parents and little sister</h5>
+                                <h5 class="card-title">My parents and little sister</h5>
                             </div>
                         
                         </div>
@@ -94,7 +102,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/family/My father's youth.jpeg" class="card-img-top" alt="My father's youth.jpeg">
+                            <img src="/gallery/Family/My father's youth.jpeg" class="card-img-top" alt="My father's youth.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">My father's youth</h5>
@@ -105,7 +113,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/family/Yu, my little sister.jpg" class="card-img-top" alt="Yu, my little sister.jpg">
+                            <img src="/gallery/Family/Yu, my little sister.jpg" class="card-img-top" alt="Yu, my little sister.jpg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Yu, my little sister</h5>
@@ -116,10 +124,10 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/family/my maternal grandmather.png" class="card-img-top" alt="my maternal grandmather.png">
+                            <img src="/gallery/Family/My maternal grandmather.png" class="card-img-top" alt="My maternal grandmather.png">
                     
                             <div class="card-body">
-                                <h5 class="card-title">my maternal grandmather</h5>
+                                <h5 class="card-title">My maternal grandmather</h5>
                             </div>
                         
                         </div>
@@ -127,7 +135,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/family/Huai 'an Hexia ancient Town, maternal grandmother's hometown.jpg" class="card-img-top" alt="Huai 'an Hexia ancient Town, maternal grandmother's hometown.jpg">
+                            <img src="/gallery/Family/Huai 'an Hexia ancient Town, maternal grandmother's hometown.jpg" class="card-img-top" alt="Huai 'an Hexia ancient Town, maternal grandmother's hometown.jpg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Huai 'an Hexia ancient Town, maternal grandmother's hometown</h5>
@@ -135,10 +143,10 @@
                         
                         </div>
                     </div>
-                    <div class="category-title">travel</div>
+                    <div class="category-title"></div>
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/Calton Hill, in Edinburgh.jpeg" class="card-img-top" alt="Calton Hill, in Edinburgh.jpeg">
+                            <img src="/gallery/Travel/Calton Hill, in Edinburgh.jpeg" class="card-img-top" alt="Calton Hill, in Edinburgh.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Calton Hill, in Edinburgh</h5>
@@ -149,7 +157,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/Giant's Causeway.jpeg" class="card-img-top" alt="Giant's Causeway.jpeg">
+                            <img src="/gallery/Travel/Giant's Causeway.jpeg" class="card-img-top" alt="Giant's Causeway.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Giant's Causeway</h5>
@@ -160,7 +168,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/Phuket Beach.jpeg" class="card-img-top" alt="Phuket Beach.jpeg">
+                            <img src="/gallery/Travel/Phuket Beach.jpeg" class="card-img-top" alt="Phuket Beach.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Phuket Beach</h5>
@@ -171,7 +179,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/Taronga Zoo.jpeg" class="card-img-top" alt="Taronga Zoo.jpeg">
+                            <img src="/gallery/Travel/Taronga Zoo.jpeg" class="card-img-top" alt="Taronga Zoo.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Taronga Zoo</h5>
@@ -182,7 +190,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/山塘街.jpeg" class="card-img-top" alt="山塘街.jpeg">
+                            <img src="/gallery/Travel/山塘街.jpeg" class="card-img-top" alt="山塘街.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">山塘街</h5>
@@ -193,7 +201,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/Arthur's throne.jpeg" class="card-img-top" alt="Arthur's throne.jpeg">
+                            <img src="/gallery/Travel/Arthur's throne.jpeg" class="card-img-top" alt="Arthur's throne.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Arthur's throne</h5>
@@ -204,7 +212,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/Dean Village.jpeg" class="card-img-top" alt="Dean Village.jpeg">
+                            <img src="/gallery/Travel/Dean Village.jpeg" class="card-img-top" alt="Dean Village.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Dean Village</h5>
@@ -215,7 +223,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/Dark hedge.jpeg" class="card-img-top" alt="Dark hedge.jpeg">
+                            <img src="/gallery/Travel/Dark hedge.jpeg" class="card-img-top" alt="Dark hedge.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Dark hedge</h5>
@@ -226,7 +234,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/廊桥飞虹.jpeg" class="card-img-top" alt="廊桥飞虹.jpeg">
+                            <img src="/gallery/Travel/廊桥飞虹.jpeg" class="card-img-top" alt="廊桥飞虹.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">廊桥飞虹</h5>
@@ -237,7 +245,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/Island Ward.jpeg" class="card-img-top" alt="Island Ward.jpeg">
+                            <img src="/gallery/Travel/Island Ward.jpeg" class="card-img-top" alt="Island Ward.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Island Ward</h5>
@@ -248,7 +256,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/Torch show, in Phuket.jpeg" class="card-img-top" alt="Torch show, in Phuket.jpeg">
+                            <img src="/gallery/Travel/Torch show, in Phuket.jpeg" class="card-img-top" alt="Torch show, in Phuket.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Torch show, in Phuket</h5>
@@ -259,7 +267,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/Hosier lane.jpeg" class="card-img-top" alt="Hosier lane.jpeg">
+                            <img src="/gallery/Travel/Hosier lane.jpeg" class="card-img-top" alt="Hosier lane.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Hosier lane</h5>
@@ -270,7 +278,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/Miss Saigon, at the Sydney Opera House.jpeg" class="card-img-top" alt="Miss Saigon, at the Sydney Opera House.jpeg">
+                            <img src="/gallery/Travel/Miss Saigon, at the Sydney Opera House.jpeg" class="card-img-top" alt="Miss Saigon, at the Sydney Opera House.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Miss Saigon, at the Sydney Opera House</h5>
@@ -281,7 +289,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/拙政园.jpeg" class="card-img-top" alt="拙政园.jpeg">
+                            <img src="/gallery/Travel/拙政园.jpeg" class="card-img-top" alt="拙政园.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">拙政园</h5>
@@ -292,7 +300,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/舟山.jpeg" class="card-img-top" alt="舟山.jpeg">
+                            <img src="/gallery/Travel/舟山.jpeg" class="card-img-top" alt="舟山.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">舟山</h5>
@@ -303,7 +311,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/白塔.jpeg" class="card-img-top" alt="白塔.jpeg">
+                            <img src="/gallery/Travel/白塔.jpeg" class="card-img-top" alt="白塔.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">白塔</h5>
@@ -314,7 +322,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/Darling harbor.jpeg" class="card-img-top" alt="Darling harbor.jpeg">
+                            <img src="/gallery/Travel/Darling harbor.jpeg" class="card-img-top" alt="Darling harbor.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">Darling harbor</h5>
@@ -325,7 +333,7 @@
                     
                     <div class="gallery-item">
                         <div class="card" style="">
-                            <img src="/gallery/travel/In Oxford, with Mark.jpeg" class="card-img-top" alt="In Oxford, with Mark.jpeg">
+                            <img src="/gallery/Travel/In Oxford, with Mark.jpeg" class="card-img-top" alt="In Oxford, with Mark.jpeg">
                     
                             <div class="card-body">
                                 <h5 class="card-title">In Oxford, with Mark</h5>
@@ -333,73 +341,73 @@
                         
                         </div>
                     </div>
-                    <div class="category-title">food</div>
+                    <div class="category-title"></div>
                     <div class="gallery-item">
                         <div class="card" style="border: none;">
-                            <img src="/gallery/food/IMG_4471.jpeg" class="card-img-top" alt="IMG_4471.jpeg">
+                            <img src="/gallery/Food/IMG_4471.jpeg" class="card-img-top" alt="IMG_4471.jpeg">
                     
                         </div>
                     </div>
                     
                     <div class="gallery-item">
                         <div class="card" style="border: none;">
-                            <img src="/gallery/food/IMG_4780.jpeg" class="card-img-top" alt="IMG_4780.jpeg">
+                            <img src="/gallery/Food/IMG_4780.jpeg" class="card-img-top" alt="IMG_4780.jpeg">
                     
                         </div>
                     </div>
                     
                     <div class="gallery-item">
                         <div class="card" style="border: none;">
-                            <img src="/gallery/food/IMG_2188.jpeg" class="card-img-top" alt="IMG_2188.jpeg">
+                            <img src="/gallery/Food/IMG_2188.jpeg" class="card-img-top" alt="IMG_2188.jpeg">
                     
                         </div>
                     </div>
                     
                     <div class="gallery-item">
                         <div class="card" style="border: none;">
-                            <img src="/gallery/food/IMG_4908.jpeg" class="card-img-top" alt="IMG_4908.jpeg">
+                            <img src="/gallery/Food/IMG_4908.jpeg" class="card-img-top" alt="IMG_4908.jpeg">
                     
                         </div>
                     </div>
                     
                     <div class="gallery-item">
                         <div class="card" style="border: none;">
-                            <img src="/gallery/food/IMG_4909.jpeg" class="card-img-top" alt="IMG_4909.jpeg">
+                            <img src="/gallery/Food/IMG_4909.jpeg" class="card-img-top" alt="IMG_4909.jpeg">
                     
                         </div>
                     </div>
                     
                     <div class="gallery-item">
                         <div class="card" style="border: none;">
-                            <img src="/gallery/food/IMG_4677.jpeg" class="card-img-top" alt="IMG_4677.jpeg">
+                            <img src="/gallery/Food/IMG_4677.jpeg" class="card-img-top" alt="IMG_4677.jpeg">
                     
                         </div>
                     </div>
                     
                     <div class="gallery-item">
                         <div class="card" style="border: none;">
-                            <img src="/gallery/food/IMG_2432.jpeg" class="card-img-top" alt="IMG_2432.jpeg">
+                            <img src="/gallery/Food/IMG_2432.jpeg" class="card-img-top" alt="IMG_2432.jpeg">
                     
                         </div>
                     </div>
                     
                     <div class="gallery-item">
                         <div class="card" style="border: none;">
-                            <img src="/gallery/food/IMG_2186.jpeg" class="card-img-top" alt="IMG_2186.jpeg">
+                            <img src="/gallery/Food/IMG_2186.jpeg" class="card-img-top" alt="IMG_2186.jpeg">
                     
                         </div>
                     </div>
                     
                     <div class="gallery-item">
                         <div class="card" style="border: none;">
-                            <img src="/gallery/food/IMG_3563.jpeg" class="card-img-top" alt="IMG_3563.jpeg">
+                            <img src="/gallery/Food/IMG_3563.jpeg" class="card-img-top" alt="IMG_3563.jpeg">
                     
                         </div>
                     </div>
                     
                     <div class="gallery-item">
                         <div class="card" style="border: none;">
-                            <img src="/gallery/food/IMG_4673.jpeg" class="card-img-top" alt="IMG_4673.jpeg">
+                            <img src="/gallery/Food/IMG_4673.jpeg" class="card-img-top" alt="IMG_4673.jpeg">
                     
                         </div>
                     </div>
@@ -409,6 +417,36 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const theme = localStorage.getItem('theme') || 'light';
+                document.body.classList.add(theme + '-theme');
+
+                document.querySelectorAll('.js-set-theme-light').forEach(el => {
+                    el.addEventListener('click', () => {
+                        document.body.classList.remove('dark-theme', 'auto-theme');
+                        document.body.classList.add('light-theme');
+                        localStorage.setItem('theme', 'light');
+                    });
+                });
+
+                document.querySelectorAll('.js-set-theme-dark').forEach(el => {
+                    el.addEventListener('click', () => {
+                        document.body.classList.remove('light-theme', 'auto-theme');
+                        document.body.classList.add('dark-theme');
+                        localStorage.setItem('theme', 'dark');
+                    });
+                });
+
+                document.querySelectorAll('.js-set-theme-auto').forEach(el => {
+                    el.addEventListener('click', () => {
+                        document.body.classList.remove('light-theme', 'dark-theme');
+                        document.body.classList.add('auto-theme');
+                        localStorage.setItem('theme', 'auto');
+                    });
+                });
+            });
+        </script>
     </body>
     </html>
     
