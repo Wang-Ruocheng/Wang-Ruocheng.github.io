@@ -7,6 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
   
   
@@ -1101,7 +1102,7 @@
   <div class="col-12 col-lg-8">
 
     
-    <h1>Biography</h1>
+    <h1>About me</h1>
 
     
     <div class="article-style">
@@ -1255,7 +1256,7 @@
       
         <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
           <h1 class="mb-0">Recent News</h1>
-          <p class="mt-1"><a href="/news">All news&raquo;</a></p>
+          <!-- <p class="mt-1"><a href="/news">All news&raquo;</a></p> -->
         </div>
       
     
@@ -1489,7 +1490,7 @@
   </span>
   (2024).
   <a href="https://arxiv.org/html/2412.04825v1">Universal Hamming Weight Preserving Variational Quantum Ansatz</a>.
-  In <em>arXiv preprint arXiv:2412.04825, 2024.(subbmitted to <strong> Nature</strong>)</em> .
+  In <em>arXiv preprint arXiv:2412.04825, 2024.(subbmitted to <strong> Nature Computational Science</strong>)</em> .
   
   <p>
 
@@ -1777,590 +1778,52 @@
     
       
         <div class="section-heading col-12 mb-3 text-center">
-          <h1 class="mb-0">Research</h1>
+          <h1 class="mb-0">Gallery</h1>
           
         </div>
       
-    
-  
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="col-12 ">
-
-  
-
-  
-
-    
-
-    
-    
-    
-    
-      
-      
-        
-      
-    
-
-    <span class="d-none default-project-filter">*</span>
-
-    
-    
-    <div class="project-toolbar">
-      <div class="project-filters">
-        <div class="btn-toolbar d-flex justify-content-center">
-          <div class="btn-group flex-wrap">
-            
-              
-              
-              
-                
-                  
-                
-              
-              <a href="#" data-filter="*" class="btn btn-primary btn-lg active">All</a>
-            
-              
-              
-              
-                
-                  
-                
-              
-              <a href="#" data-filter=".js-id-wireless-sensor-networks" class="btn btn-primary btn-lg">Wireless Sensor Networks</a>
-            
-              
-              
-              
-                
-                  
-                
-              
-              <a href="#" data-filter=".js-id-routing-optimization" class="btn btn-primary btn-lg">Routing Optimization</a>
-            
-              
-              
-              
-                
-                  
-                
-              
-              <a href="#" data-filter=".js-id-cybersecurity" class="btn btn-primary btn-lg">Cybersecurity</a>
-            
-              
-              
-              
-                
-                  
-                
-              
-              <a href="#" data-filter=".js-id-smart-contracts" class="btn btn-primary btn-lg">Smart Contracts</a>
-            
           </div>
-        </div>
-      </div>
-    </div>
-    
-  
-
-  <div class="isotope projects-container row js-layout-row project-showcase">
-
-    
-    
-
-    
-    
-    
-      
-    
-    
-    
-    
-      
-    
-
-    
-    
-    
-    
-    
-    
-
-    
-      
+          <script>
+            async function loadGallery() {
+              const response = await fetch('/api/gallery');
+              const categories = await response.json();
+              const container = document.getElementById('gallery-container');
         
-          <div class="col-12 isotope-item js-id-cybersecurity js-id-wireless-sensor-networks">
+              for (const [category, images] of Object.entries(categories)) {
+                const categoryRow = document.createElement('div');
+                categoryRow.className = 'row';
+                const categoryTitle = document.createElement('div');
+                categoryTitle.className = 'col-12 mb-3 text-center';
+                categoryTitle.innerHTML = `<h2>${category}</h2>`;
+                categoryRow.appendChild(categoryTitle);
         
+                images.forEach(image => {
+                  const col = document.createElement('div');
+                  col.className = 'col-lg-4 col-md-6 mb-4';
+                  col.innerHTML = `
+                    <div class="card">
+                      <img src="/gallery/${image}" class="card-img-top" alt="${image}">
+                      <div class="card-body">
+                        <h5 class="card-title">${image.split('/').pop().split('.')[0]}</h5>
+                      </div>
+                    </div>
+                  `;
+                  categoryRow.appendChild(col);
+                });
         
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-<div class="col-lg-12 mb-5 view-showcase">
-  <div class="row align-items-center">
-    <div class="col-12 col-md-6">
-      <div class="section-subheading article-title mb-0 mt-0"><a href="/project/fedtsa/" >FedS3A</a></div>
-
-      
-      <div class="article-style">
-        A federated semi-supervised and semi-asynchronous learning (FedS3A) for anomaly detection in IoT networks
-      </div>
-      
-
-      <div class="btn-links">
+                container.appendChild(categoryRow);
+              }
+            }
         
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2308.11981" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-    </div>
-    <div class="col-12 col-md-6 order-first ">
-      
-
-      
+            document.addEventListener('DOMContentLoaded', loadGallery);
+          </script>
+        </head>
         
-        <a href="/project/fedtsa/" >
-          <img src="/project/fedtsa/featured_hu92456580e56fddf4f3c592621d13c105_396410_540x0_resize_q75_h2_lanczos.webp" height="252" width="540"
-              alt="FedS3A" loading="lazy">
-        </a>
-      
-    </div>
-  </div>
-</div>
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-      </div>
-    
-      
-        
-          <div class="col-12 isotope-item js-id-routing-optimization js-id-wireless-sensor-networks">
-        
-        
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-<div class="col-lg-12 mb-5 view-showcase">
-  <div class="row align-items-center">
-    <div class="col-12 col-md-6">
-      <div class="section-subheading article-title mb-0 mt-0"><a href="/project/esta/" >ESTA</a></div>
-
-      
-      <div class="article-style">
-        An efficient spatial-temporal range aggregation query processing (ESTA) algorithm  for UAV networks
-      </div>
-      
-
-      <div class="btn-links">
-        
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-<a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2308.11977" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-    </div>
-    <div class="col-12 col-md-6 order-first ">
-      
-
-      
-        
-        <a href="/project/esta/" >
-          <img src="/project/esta/featured_hu92456580e56fddf4f3c592621d13c105_267839_540x0_resize_q75_h2_lanczos.webp" height="321" width="540"
-              alt="ESTA" loading="lazy">
-        </a>
-      
-    </div>
-  </div>
-</div>
-
-      </div>
-    
-      
-        
-          <div class="col-12 isotope-item js-id-cybersecurity js-id-wireless-sensor-networks">
-        
-        
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-<div class="col-lg-12 mb-5 view-showcase">
-  <div class="row align-items-center">
-    <div class="col-12 col-md-6">
-      <div class="section-subheading article-title mb-0 mt-0"><a href="/project/etd/" >ETD</a></div>
-
-      
-      <div class="article-style">
-        An efficient time delay attack detection scheme (ETD) to detect time delay attack in UAV networks
-      </div>
-      
-
-      <div class="btn-links">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<a class="btn btn-outline-primary btn-page-header" href="/project/etd/ETD.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-    </div>
-    <div class="col-12 col-md-6 order-first ">
-      
-
-      
-        
-        <a href="/project/etd/" >
-          <img src="/project/etd/featured_hu92456580e56fddf4f3c592621d13c105_959743_540x0_resize_q75_h2_lanczos.webp" height="426" width="540"
-              alt="ETD" loading="lazy">
-        </a>
-      
-    </div>
-  </div>
-</div>
-
-      </div>
-    
-      
-        
-          <div class="col-12 isotope-item js-id-cybersecurity js-id-wireless-sensor-networks">
-        
-        
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-<div class="col-lg-12 mb-5 view-showcase">
-  <div class="row align-items-center">
-    <div class="col-12 col-md-6">
-      <div class="section-subheading article-title mb-0 mt-0"><a href="/project/hotd/" >HOTD</a></div>
-
-      
-      <div class="article-style">
-        A holistic cross-layer time delay attack detection framework (HOTD) to detect time delay attack in UAV networks
-      </div>
-      
-
-      <div class="btn-links">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<a class="btn btn-outline-primary btn-page-header" href="/project/hotd/HOTD.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-    </div>
-    <div class="col-12 col-md-6 order-first ">
-      
-
-      
-        
-        <a href="/project/hotd/" >
-          <img src="/project/hotd/featured_hu92456580e56fddf4f3c592621d13c105_771794_540x0_resize_q75_h2_lanczos.webp" height="161" width="540"
-              alt="HOTD" loading="lazy">
-        </a>
-      
-    </div>
-  </div>
-</div>
-
-      </div>
-    
-      
-        
-          <div class="col-12 isotope-item js-id-routing-optimization js-id-wireless-sensor-networks">
-        
-        
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-<div class="col-lg-12 mb-5 view-showcase">
-  <div class="row align-items-center">
-    <div class="col-12 col-md-6">
-      <div class="section-subheading article-title mb-0 mt-0"><a href="/project/par/" >PAR</a></div>
-
-      
-      <div class="article-style">
-        A power-aware routing (PAR) algorithm to optimize energy consumption in delay-constrained UAV networks
-      </div>
-      
-
-      <div class="btn-links">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<a class="btn btn-outline-primary btn-page-header" href="/project/par/PAR.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-    </div>
-    <div class="col-12 col-md-6 order-first ">
-      
-
-      
-        
-        <a href="/project/par/" >
-          <img src="/project/par/featured_hu92456580e56fddf4f3c592621d13c105_342040_540x0_resize_q75_h2_lanczos.webp" height="224" width="540"
-              alt="PAR" loading="lazy">
-        </a>
-      
-    </div>
-  </div>
-</div>
-
-      </div>
-    
-
-  </div>
-</div>
-
-
-  
-    </div>
   
 
   </div>
@@ -2465,13 +1928,16 @@
 
 
 
-
+<p><strong>[2024]</strong> B-class scholarship, SJTU</p>
 <p><strong>[2024]</strong> First prize of the Challenge Cup special competition</p>
-<p><strong>[2024]</strong> Rong Chang Science and Technology Innovation Scholarship National Scholarship </p>
+<p><strong>[2024]</strong> Rong Chang Science and Technology Innovation Scholarship </p>
 <p><strong>[2023]</strong> National Scholarship</p>
 <p><strong>[2023]</strong> A-class scholarship, SJTU</p>
-<p><strong>[2022]</strong> “四有”优秀士兵 （</strong>“有灵魂，有本事，有血性，有品德”</strong>）</p>
+<p><strong>[2023]</strong> Hanying Ju Hua Scholarship, SJTU</p>
+<p><strong>[2022]</strong> Zhiyuan Outstanding Leader Scholarship (</strong>First prize</strong>), SJTU</p>
+<p><strong>[2022]</strong> “四有”优秀士兵 (</strong>“有灵魂，有本事，有血性，有品德”</strong>)</p>
 <p><strong>[2021,2022]</strong> 武警上海总队某支队嘉奖</p>
+<p><strong>[2019]</strong> C-class scholarship, SJTU</p>
 <p><strong>[2019,2022,2024]</strong> Zhiyuan Honors Scholarship, SJTU</p>
 <p><strong>[2018]</strong> Bronze medal for Chinese Mid-school Physics Olympiad</p>
 <p><strong>[2018]</strong>1st Prize for Jiangsu Mid-school Mathematical Olympiad</p>
