@@ -2,7 +2,7 @@ import os
 
 def generate_gallery_html():
     gallery_path = 'gallery'
-    categories_order = ['family', 'travel', 'food']
+    categories_order = ['Family', 'Travel', 'Food']
     html_content = '''
     <!DOCTYPE html>
     <html lang="en">
@@ -42,6 +42,14 @@ def generate_gallery_html():
             .card {
                 border: none; /* 移除卡片边框 */
             }
+            .dark-theme .card {
+                background-color: #333;
+                color: #fff;
+            }
+            .light-theme .card {
+                background-color: #fff;
+                color: #000;
+            }
         </style>
     </head>
     <body>
@@ -63,10 +71,10 @@ def generate_gallery_html():
                     image_path = os.path.join(category, image)
                     html_content += f'''
                     <div class="gallery-item">
-                        <div class="card" style="{'border: none;' if category == 'food' else ''}">
+                        <div class="card" style="{'border: none;' if category == 'Food' else ''}">
                             <img src="/gallery/{image_path}" class="card-img-top" alt="{image}">
                     '''
-                    if category != 'food':
+                    if category != 'Food':
                         html_content += f'''
                             <div class="card-body">
                                 <h5 class="card-title">{os.path.splitext(image)[0]}</h5>
@@ -83,6 +91,36 @@ def generate_gallery_html():
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const theme = localStorage.getItem('theme') || 'light';
+                document.body.classList.add(theme + '-theme');
+
+                document.querySelectorAll('.js-set-theme-light').forEach(el => {
+                    el.addEventListener('click', () => {
+                        document.body.classList.remove('dark-theme', 'auto-theme');
+                        document.body.classList.add('light-theme');
+                        localStorage.setItem('theme', 'light');
+                    });
+                });
+
+                document.querySelectorAll('.js-set-theme-dark').forEach(el => {
+                    el.addEventListener('click', () => {
+                        document.body.classList.remove('light-theme', 'auto-theme');
+                        document.body.classList.add('dark-theme');
+                        localStorage.setItem('theme', 'dark');
+                    });
+                });
+
+                document.querySelectorAll('.js-set-theme-auto').forEach(el => {
+                    el.addEventListener('click', () => {
+                        document.body.classList.remove('light-theme', 'dark-theme');
+                        document.body.classList.add('auto-theme');
+                        localStorage.setItem('theme', 'auto');
+                    });
+                });
+            });
+        </script>
     </body>
     </html>
     '''
