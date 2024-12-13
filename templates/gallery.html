@@ -5,10 +5,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gallery</title>
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap" media="print" onload="this.media='all'">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <style>
             body {
+            font-family: 'Roboto', sans-serif; /* 设置全局字体 */
                 background-color: transparent; /* 设置背景颜色为透明 */
+                color: white; /* 设置全局字体颜色为白色 */
             }
             .gallery-container {
                 column-count: 4; /* 设置列数 */
@@ -28,7 +33,6 @@
                 text-align: center; /* 图片标题居中 */
             }
             .category-title {
-               
                 column-span: all;
                 text-align: center;
                 margin: 20px 0;
@@ -37,25 +41,18 @@
             }
             .card {
                 border: none; /* 移除卡片边框 */
+                background-color: transparent; /* 设置卡片背景颜色为透明 */
+                color: inherit; /* 继承全局字体颜色 */
             }
-            .dark-theme .card {
-                background-color: #333;
-                color: #fff;
+            .card-body {
+                background-color: transparent; /* 设置卡片内容区域背景颜色为透明 */
             }
-            .light-theme .card {
-                background-color: #fff;
-                color: #000;
-            }
+
         </style>
     </head>
     <body>
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="section-heading col-12 mb-3 text-center">
-                </div>
-            </div>
             <div class="gallery-container">
-    <div class="category-title"></div>
+    <div class="category-title">Family</div>
                     <div class="gallery-item">
                         <div class="card" style="">
                             <img src="/gallery/Family/My grandfather.jpeg" class="card-img-top" alt="My grandfather.jpeg">
@@ -143,7 +140,7 @@
                         
                         </div>
                     </div>
-                    <div class="category-title"></div>
+                    <div class="category-title">Travel</div>
                     <div class="gallery-item">
                         <div class="card" style="">
                             <img src="/gallery/Travel/Calton Hill, in Edinburgh.jpeg" class="card-img-top" alt="Calton Hill, in Edinburgh.jpeg">
@@ -341,74 +338,114 @@
                         
                         </div>
                     </div>
-                    <div class="category-title"></div>
+                    <div class="category-title">Food</div>
                     <div class="gallery-item">
-                        <div class="card" style="border: none;">
+                        <div class="card" style="">
                             <img src="/gallery/Food/IMG_4471.jpeg" class="card-img-top" alt="IMG_4471.jpeg">
                     
+                            <div class="card-body">
+                                <h5 class="card-title">IMG_4471</h5>
+                            </div>
+                        
                         </div>
                     </div>
                     
                     <div class="gallery-item">
-                        <div class="card" style="border: none;">
+                        <div class="card" style="">
                             <img src="/gallery/Food/IMG_4780.jpeg" class="card-img-top" alt="IMG_4780.jpeg">
                     
+                            <div class="card-body">
+                                <h5 class="card-title">IMG_4780</h5>
+                            </div>
+                        
                         </div>
                     </div>
                     
                     <div class="gallery-item">
-                        <div class="card" style="border: none;">
+                        <div class="card" style="">
                             <img src="/gallery/Food/IMG_2188.jpeg" class="card-img-top" alt="IMG_2188.jpeg">
                     
+                            <div class="card-body">
+                                <h5 class="card-title">IMG_2188</h5>
+                            </div>
+                        
                         </div>
                     </div>
                     
                     <div class="gallery-item">
-                        <div class="card" style="border: none;">
+                        <div class="card" style="">
                             <img src="/gallery/Food/IMG_4908.jpeg" class="card-img-top" alt="IMG_4908.jpeg">
                     
+                            <div class="card-body">
+                                <h5 class="card-title">IMG_4908</h5>
+                            </div>
+                        
                         </div>
                     </div>
                     
                     <div class="gallery-item">
-                        <div class="card" style="border: none;">
+                        <div class="card" style="">
                             <img src="/gallery/Food/IMG_4909.jpeg" class="card-img-top" alt="IMG_4909.jpeg">
                     
+                            <div class="card-body">
+                                <h5 class="card-title">IMG_4909</h5>
+                            </div>
+                        
                         </div>
                     </div>
                     
                     <div class="gallery-item">
-                        <div class="card" style="border: none;">
+                        <div class="card" style="">
                             <img src="/gallery/Food/IMG_4677.jpeg" class="card-img-top" alt="IMG_4677.jpeg">
                     
+                            <div class="card-body">
+                                <h5 class="card-title">IMG_4677</h5>
+                            </div>
+                        
                         </div>
                     </div>
                     
                     <div class="gallery-item">
-                        <div class="card" style="border: none;">
+                        <div class="card" style="">
                             <img src="/gallery/Food/IMG_2432.jpeg" class="card-img-top" alt="IMG_2432.jpeg">
                     
+                            <div class="card-body">
+                                <h5 class="card-title">IMG_2432</h5>
+                            </div>
+                        
                         </div>
                     </div>
                     
                     <div class="gallery-item">
-                        <div class="card" style="border: none;">
+                        <div class="card" style="">
                             <img src="/gallery/Food/IMG_2186.jpeg" class="card-img-top" alt="IMG_2186.jpeg">
                     
+                            <div class="card-body">
+                                <h5 class="card-title">IMG_2186</h5>
+                            </div>
+                        
                         </div>
                     </div>
                     
                     <div class="gallery-item">
-                        <div class="card" style="border: none;">
+                        <div class="card" style="">
                             <img src="/gallery/Food/IMG_3563.jpeg" class="card-img-top" alt="IMG_3563.jpeg">
                     
+                            <div class="card-body">
+                                <h5 class="card-title">IMG_3563</h5>
+                            </div>
+                        
                         </div>
                     </div>
                     
                     <div class="gallery-item">
-                        <div class="card" style="border: none;">
+                        <div class="card" style="">
                             <img src="/gallery/Food/IMG_4673.jpeg" class="card-img-top" alt="IMG_4673.jpeg">
                     
+                            <div class="card-body">
+                                <h5 class="card-title">IMG_4673</h5>
+                            </div>
+                        
                         </div>
                     </div>
                     

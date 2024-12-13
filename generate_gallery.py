@@ -10,10 +10,15 @@ def generate_gallery_html():
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gallery</title>
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap" media="print" onload="this.media='all'">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <style>
             body {
+            font-family: 'Roboto', sans-serif; /* 设置全局字体 */
                 background-color: transparent; /* 设置背景颜色为透明 */
+                color: white; /* 设置全局字体颜色为白色 */
             }
             .gallery-container {
                 column-count: 4; /* 设置列数 */
@@ -33,7 +38,6 @@ def generate_gallery_html():
                 text-align: center; /* 图片标题居中 */
             }
             .category-title {
-               
                 column-span: all;
                 text-align: center;
                 margin: 20px 0;
@@ -42,39 +46,32 @@ def generate_gallery_html():
             }
             .card {
                 border: none; /* 移除卡片边框 */
+                background-color: transparent; /* 设置卡片背景颜色为透明 */
+                color: inherit; /* 继承全局字体颜色 */
             }
-            .dark-theme .card {
-                background-color: #333;
-                color: #fff;
+            .card-body {
+                background-color: transparent; /* 设置卡片内容区域背景颜色为透明 */
             }
-            .light-theme .card {
-                background-color: #fff;
-                color: #000;
-            }
+
         </style>
     </head>
     <body>
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="section-heading col-12 mb-3 text-center">
-                </div>
-            </div>
             <div class="gallery-container">
     '''
 
     for category in categories_order:
         category_path = os.path.join(gallery_path, category)
         if os.path.isdir(category_path):
-            html_content += '<div class="category-title"></div>'
+            html_content += f'<div class="category-title">{category}</div>'
             for image in os.listdir(category_path):
                 if image.endswith(('jpg', 'jpeg', 'png', 'gif')):
                     image_path = os.path.join(category, image)
                     html_content += f'''
                     <div class="gallery-item">
-                        <div class="card" style="{'border: none;' if category == 'Food' else ''}">
+                        <div class="card" style="{'border: none;' if category == 'food' else ''}">
                             <img src="/gallery/{image_path}" class="card-img-top" alt="{image}">
                     '''
-                    if category != 'Food':
+                    if category != 'food':
                         html_content += f'''
                             <div class="card-body">
                                 <h5 class="card-title">{os.path.splitext(image)[0]}</h5>
