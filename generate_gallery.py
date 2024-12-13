@@ -80,18 +80,18 @@ def generate_gallery_html():
             }
             @media (max-width: 768px) {
                 .gallery-container {
-                    column-count: 4; /* 设置列数 */
+                    column-count: 3; /* 设置列数 */
                 }
                 .category-title {
-                    font-size: 1.2em;
+                    font-size: 1em;
                 }
             }
             @media (max-width: 576px) {
                 .gallery-container {
-                    column-count: 4; /* 设置列数 */
+                    column-count: 3; /* 设置列数 */
                 }
                 .category-title {
-                    font-size: 1.1em;
+                    font-size: 0.7em;
                 }
             }
         </style>
