@@ -59,6 +59,7 @@ def generate_gallery_html():
             }
             .card-body {
                 background-color: transparent; /* 设置卡片内容区域背景颜色为透明 */
+                font-size: 0.9em; /* 调整字体大小 */
             }
 
             /* 媒体查询 */
@@ -69,13 +70,19 @@ def generate_gallery_html():
                 .category-title {
                     font-size: 1.4em;
                 }
+                .card-body {
+                    font-size: 0.8em; /* 调整字体大小 */
+                }
             }
             @media (max-width: 992px) {
                 .gallery-container {
                     column-count: 4; /* 设置列数 */
                 }
                 .category-title {
-                    font-size: 1.3em;
+                    font-size: 1.4em;
+                }
+                .card-body {
+                    font-size: 0.8em; /* 调整字体大小 */
                 }
             }
             @media (max-width: 768px) {
@@ -83,7 +90,10 @@ def generate_gallery_html():
                     column-count: 3; /* 设置列数 */
                 }
                 .category-title {
-                    font-size: 1em;
+                    font-size: 1.3em;
+                }
+                .card-body {
+                    font-size: 0.7em; /* 调整字体大小 */
                 }
             }
             @media (max-width: 576px) {
@@ -91,7 +101,10 @@ def generate_gallery_html():
                     column-count: 3; /* 设置列数 */
                 }
                 .category-title {
-                    font-size: 0.7em;
+                    font-size: 1.3em;
+                }
+                .card-body {
+                    font-size: 0.7em; /* 调整字体大小 */
                 }
             }
         </style>
