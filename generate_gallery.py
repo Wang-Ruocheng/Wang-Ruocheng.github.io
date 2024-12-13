@@ -2,7 +2,8 @@ import os
 
 def generate_gallery_html():
     gallery_path = 'gallery'
-    categories_order = ['Family', 'Travel', 'Food']
+    categories_order = ['family', 'travel', 'food']
+    categories_title_indict = {'family': 'Family', 'travel': 'Travel', 'food': 'Food'}
     html_content = '''
     <!DOCTYPE html>
     <html lang="en">
@@ -104,16 +105,16 @@ def generate_gallery_html():
     for category in categories_order:
         category_path = os.path.join(gallery_path, category)
         if os.path.isdir(category_path):
-            html_content += f'<div class="category-title">{category}</div>'
+            html_content += f'<div class="category-title">{categories_title_indict[category]}</div>'
             for image in os.listdir(category_path):
                 if image.endswith(('jpg', 'jpeg', 'png', 'gif')):
                     image_path = os.path.join(category, image)
                     html_content += f'''
                     <div class="gallery-item">
-                        <div class="card" style="{'border: none;' if category == 'Food' else ''}">
+                        <div class="card" style="{'border: none;' if category == 'food' else ''}">
                             <img src="/gallery/{image_path}" class="card-img-top" alt="{image}">
                     '''
-                    if category != 'Food':
+                    if category != 'food':
                         html_content += f'''
                             <div class="card-body">
                                 <h5 class="card-title">{os.path.splitext(image)[0]}</h5>
