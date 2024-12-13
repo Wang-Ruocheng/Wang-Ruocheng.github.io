@@ -112,7 +112,7 @@ def generate_gallery_html():
                     html_content += f'''
                     <div class="gallery-item">
                         <div class="card" style="{'border: none;' if category == 'food' else ''}">
-                            <img src="/gallery/{image_path}" class="card-img-top" alt="{image}">
+                            <img data-src="/gallery/{image_path}" class="card-img-top" alt="{image}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA==">
                     '''
                     if category != 'food':
                         html_content += f'''
@@ -159,11 +159,36 @@ def generate_gallery_html():
                         localStorage.setItem('theme', 'auto');
                     });
                 });
+            // 延迟加载图片
+                var lazyImages = [].slice.call(document.querySelectorAll("img[data-src]"));
+
+                if ("IntersectionObserver" in window) {
+                    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                let lazyImage = entry.target;
+                                lazyImage.src = lazyImage.dataset.src;
+                                lazyImage.removeAttribute("data-src");
+                                lazyImageObserver.unobserve(lazyImage);
+                            }
+                        });
+                    });
+
+                    lazyImages.forEach(function(lazyImage) {
+                        lazyImageObserver.observe(lazyImage);
+                    });
+                } else {
+                    // Fallback for browsers that do not support IntersectionObserver
+                    lazyImages.forEach(function(lazyImage) {
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImage.removeAttribute("data-src");
+                    });
+                }
             });
         </script>
     </body>
-    </html>
-    '''
+</html>
+'''
     return html_content
 
 if __name__ == '__main__':
