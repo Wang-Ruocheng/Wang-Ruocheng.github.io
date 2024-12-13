@@ -7,18 +7,25 @@ def generate_gallery_html():
     <!DOCTYPE html>
     <html lang="en">
     <head>
-        <meta charset="UTF-8">
+         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gallery</title>
          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap">
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap" media="print" onload="this.media='all'">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap" media="print" onload="this.media='all'">
+         <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'"> 
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+         <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+         <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <style>
             body {
             font-family: 'Roboto', sans-serif; /* 设置全局字体 */
                 background-color: transparent; /* 设置背景颜色为透明 */
-                color: white; /* 设置全局字体颜色为白色 */
+                mix-blend-mode: difference;
             }
             .gallery-container {
                 column-count: 4; /* 设置列数 */
@@ -56,7 +63,7 @@ def generate_gallery_html():
             /* 媒体查询 */
             @media (max-width: 1200px) {
                 .gallery-container {
-                    column-count: 3; /* 设置列数 */
+                    column-count: 4; /* 设置列数 */
                 }
                 .category-title {
                     font-size: 1.4em;
@@ -64,7 +71,7 @@ def generate_gallery_html():
             }
             @media (max-width: 992px) {
                 .gallery-container {
-                    column-count: 2; /* 设置列数 */
+                    column-count: 4; /* 设置列数 */
                 }
                 .category-title {
                     font-size: 1.3em;
@@ -84,6 +91,11 @@ def generate_gallery_html():
                 }
             }
         </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            });
+          </script>
     </head>
     <body>
             <div class="gallery-container">
@@ -98,10 +110,10 @@ def generate_gallery_html():
                     image_path = os.path.join(category, image)
                     html_content += f'''
                     <div class="gallery-item">
-                        <div class="card" style="{'border: none;' if category == 'food' else ''}">
+                        <div class="card" style="{'border: none;' if category == 'Food' else ''}">
                             <img src="/gallery/{image_path}" class="card-img-top" alt="{image}">
                     '''
-                    if category != 'food':
+                    if category != 'Food':
                         html_content += f'''
                             <div class="card-body">
                                 <h5 class="card-title">{os.path.splitext(image)[0]}</h5>
