@@ -49,7 +49,7 @@ def generate_gallery_html():
                 column-span: all;
                 text-align: center;
                 margin: 20px 0;
-                font-size: 1.5em;
+              font-size: 1.5em;
                 font-weight: bold;
             }
             .card {
@@ -59,7 +59,6 @@ def generate_gallery_html():
             }
             .card-body {
                 background-color: transparent; /* 设置卡片内容区域背景颜色为透明 */
-                font-size: 0.9em; /* 调整字体大小 */
             }
 
             /* 媒体查询 */
@@ -70,8 +69,8 @@ def generate_gallery_html():
                 .category-title {
                     font-size: 1.4em;
                 }
-                .card-body {
-                    font-size: 0.8em; /* 调整字体大小 */
+                .card-title {
+                    font-size: 1em; /* 调整字体大小 */
                 }
             }
             @media (max-width: 992px) {
@@ -79,10 +78,10 @@ def generate_gallery_html():
                     column-count: 4; /* 设置列数 */
                 }
                 .category-title {
-                    font-size: 1.4em;
+                    font-size: 1.3em;
                 }
-                .card-body {
-                    font-size: 0.8em; /* 调整字体大小 */
+                .card-title {
+                    font-size: 0.9em; /* 调整字体大小 */
                 }
             }
             @media (max-width: 768px) {
@@ -90,10 +89,10 @@ def generate_gallery_html():
                     column-count: 3; /* 设置列数 */
                 }
                 .category-title {
-                    font-size: 1.3em;
+                    font-size: 1.2em;
                 }
-                .card-body {
-                    font-size: 0.7em; /* 调整字体大小 */
+                .card-title {
+                    font-size: 0.9em; /* 调整字体大小 */
                 }
             }
             @media (max-width: 576px) {
@@ -101,10 +100,10 @@ def generate_gallery_html():
                     column-count: 3; /* 设置列数 */
                 }
                 .category-title {
-                    font-size: 1.3em;
+                    font-size: 1.1em;
                 }
-                .card-body {
-                    font-size: 0.7em; /* 调整字体大小 */
+                .card-title {
+                    font-size: 0.8em; /* 调整字体大小 */
                 }
             }
         </style>
