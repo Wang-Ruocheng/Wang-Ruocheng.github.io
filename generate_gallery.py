@@ -122,7 +122,7 @@ def generate_gallery_html():
         if os.path.isdir(category_path):
             html_content += f'<div class="category-title">{categories_title_indict[category]}</div>'
             for image in os.listdir(category_path):
-                if image.endswith(('jpg', 'jpeg', 'png', 'gif')):
+                if image.endswith(('jpg', 'jpeg', 'png', 'gif','JPG', 'JPEG', 'PNG', 'GIF')):
                     image_path = os.path.join(category, image)
                     html_content += f'''
                     <div class="gallery-item">
