@@ -4,6 +4,8 @@
 
 
 <head>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -290,6 +292,11 @@
           
 
           
+         <li class="nav-item">
+            <a class="nav-link " href="/#posts" data-target="#posts"><span>Posts</span></a>
+          </li>
+
+          
           
           
             
@@ -341,16 +348,6 @@
 
           
             
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
             
           
 
@@ -608,7 +605,7 @@
       <p style="text-align: justify;"> 
         I am a native of Suqian, Jiangsu Province. 
         I studied in <a href="https://www.huaizhong.com.cn/index.html" target="_blank" rel="noopener"> Huaiyin Middle School </a>of Jiangsu Province from 2016 to 2019 (I entered the Jiangsu Provincial Physics Olympiad team in 2018). 
-        I have been studying in <a href="https://www.huaizhong.com.cn/index.html" target="_blank" rel="noopener">Zhiyuan College of Shanghai Jiao Tong University</a> for an honorary degree in physics from 2019 to now. 
+        I have been studying in <a href="https://en.zhiyuan.sjtu.edu.cn" target="_blank" rel="noopener">Zhiyuan College of Shanghai Jiao Tong University</a> for an honorary degree in physics from 2019 to now. 
         Currently, I am studying for a doctorate degree in computer science in the <a href="https://soai.sjtu.edu.cn" target="_blank" rel="noopener">School of Artificial Intelligence of Shanghai Jiao Tong University</a> and Shanghai Innovation Institute (SII) under the supervision of <a href="https://thinklab.sjtu.edu.cn" target="_blank" rel="noopener">Junchi Yan</a>. </a></p>
 
     </div>
@@ -771,15 +768,6 @@
       
     
   
-
-    
-
-
-
-
-
-
-
 
 
 
@@ -1238,7 +1226,34 @@
 
   
 
-
+<section id="notes" class="home-section wg-pages">
+  <div class="container">
+    <div class="row">
+      <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+        <h1 class="mb-0">Technical Notes</h1>
+      </div>
+      
+      <div class="col-12 col-lg-8">
+        <div class="pub-list-item view-citation" style="margin-bottom: 1.5rem">
+          <i class="far fa-file-alt pub-icon" aria-hidden="true" style="color: #1565c0"></i>
+          <span class="article-metadata">Feb 1, 2026</span>
+          <br>
+          <a href="/post/oneshot-pde/" style="font-weight: bold; font-size: 1.1rem">
+            One-shot learning for solution operators of partial differential equations
+          </a>
+          <p class="article-style" style="font-size: 0.9rem; color: #555; margin-top: 0.5rem">
+            详细拆解了局部算子如何通过“信息代理”机制处理 PDE 的局部依赖性，并对比了电荷分布等非局部案例。
+          </p>
+          
+          <div class="btn-links">
+            <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/lu-group/one-shot-pde" target="_blank">Code</a>
+            <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.nature.com/articles/s41467-025-63076-z" target="_blank">Paper</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
