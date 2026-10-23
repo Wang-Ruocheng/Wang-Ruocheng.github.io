@@ -1,0 +1,159 @@
+% !TEX program = pdflatex
+% English CV for Ruocheng Wang.
+% Adapted from the Sourabh Bajaj resume template supplied by the author.
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.60in,top=0.52in,bottom=0.60in]{geometry}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+\hypersetup{
+  pdftitle={Ruocheng Wang - Curriculum Vitae},
+  pdfauthor={Ruocheng Wang},
+  pdfsubject={Academic curriculum vitae}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{gray}Ruocheng Wang}
+\fancyfoot[R]{\footnotesize\color{gray}\thepage}
+\setlength{\footskip}{23pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{-4pt}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+\setlist[itemize]{leftmargin=1.2em,label=\textbullet,itemsep=3pt,topsep=3pt,parsep=0pt,partopsep=0pt}
+
+\newcommand{\education}[3]{%
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \textbf{#1} & #2 \\
+  \end{tabularx}\par
+  #3\par\vspace{5pt}
+}
+\newcommand{\publication}[3]{%
+  \begingroup
+  \setlength{\parskip}{0pt}
+  \textbf{#1}\par
+  #2\par
+  \textit{#3}\par
+  \endgroup\vspace{5pt}
+}
+\newcommand{\project}[2]{%
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{1.2em}}r@{}}
+    \textbf{#1} & #2
+  \end{tabularx}\par\vspace{1pt}
+}
+
+\begin{document}
+\small
+
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+  \href{https://wang-ruocheng.github.io/}{\LARGE\textbf{Ruocheng Wang}} &
+  \href{mailto:ignite@sjtu.edu.cn}{ignite@sjtu.edu.cn} \\
+  \href{https://wang-ruocheng.github.io/}{wang-ruocheng.github.io} &
+  +86 138-5136-2201
+\end{tabularx}
+
+\section{Education}
+\education{Shanghai Jiao Tong University \& Shanghai Innovation Institute}
+  {Sep. 2025 -- Present}
+  {Direct-entry Ph.D. program (joint training).\\
+   Advisor: Prof. Junchi Yan, School of Artificial Intelligence.}
+\education{Shanghai Jiao Tong University}
+  {Sep. 2019 -- Jun. 2025}
+  {B.Sc. in Physics, Zhiyuan College.}
+
+\section{Honors and Awards}
+\begin{itemize}[itemsep=0pt,topsep=1pt]
+  \item National Scholarship for Graduate Students \hfill 2026
+  \item Rong Chang Science and Technology Innovation Scholarship \hfill 2024, 2025
+  \item Shanghai Outstanding Graduate \hfill 2025
+  \item National Scholarship; A-Class Undergraduate Scholarship \hfill 2023
+  \item Bronze Medal, Chinese Physics Olympiad (CPhO) \hfill 2019
+  \item Jiangsu Provincial First Prize, Chinese Mathematical Olympiad (CMO) \hfill 2019
+\end{itemize}
+
+\section{Publications}
+{\footnotesize $^*$ Equal contribution. \quad $^\dagger$ Corresponding author.}\par\vspace{4pt}
+
+\publication
+  {Quantum Neural Operators with Implicit Quadratic Frame and Expressivity Advantages}
+  {\textbf{Ruocheng Wang}$^*$ (co-first author), Xiaoqiu Zhong$^*$, Zhuo Xia, Junchi Yan$^\dagger$.}
+  {Nature Machine Intelligence}
+
+\publication
+  {CoEvol-NO: State and Coordinate Co-Evolution with an Error-Driven Predictor-Corrector Paradigm for Neural Operator Transformer}
+  {Jianqiao Zeng, \textbf{Ruocheng Wang} (second author), Yanzhi Liu, Hao Xiong, Junchi Yan$^\dagger$.}
+  {ICML 2026 (Oral)}
+
+\publication
+  {QuanONet: Quantum Neural Operator with Application to Differential Equation}
+  {\textbf{Ruocheng Wang} (first author), Zhuo Xia, Ge Yan, Junchi Yan$^\dagger$.}
+  {ICML 2025}
+
+\publication
+  {Rethinking Parity Check Enhanced Symmetry-Preserving Ansatz}
+  {Ge Yan, Mengfei Ran, \textbf{Ruocheng Wang}, Kaiseng Pan, Junchi Yan$^\dagger$.}
+  {NeurIPS 2024}
+
+\publication
+  {Non-Equilibrium and Self-Organization Evolution in Hot-Spot Ignition Processes}
+  {X.-Y. Fu$^*$, Z.-Y. Guo$^*$, Q.-H. Wang$^*$, \textbf{R.-C. Wang}$^*$ (co-first author), D. Wu, J. Zhang$^\dagger$.}
+  {Physics of Plasmas}
+
+\publication
+  {HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task}
+  {Xiaoya Lu, Yijin Zhou, Zeren Chen, \textbf{Ruocheng Wang}, Bingrui Sima, Enshen Zhou, Lu Sheng, Dongrui Liu, Jing Shao.}
+  {ECCV 2026}
+
+\publication
+  {AI-Empowered Quantum Circuit Synthesis and Compilation Optimization: Overview and Prospects}
+  {Ge Yan, Wenjie Wu, Yuheng Chen, Kaisen Pan, Xudong Lu, Zixiang Zhou, Yuhan Wang, \textbf{Ruocheng Wang}, Junchi Yan$^\dagger$.}
+  {TPAMI 2026}
+
+\newpage
+\section{Research Projects}
+
+\project{Recurrent RG Net: Renormalization Group Learning without Coupling Labels}
+  {2026 -- Present}
+\begin{itemize}
+  \item Develop a framework for multiscale statistical learning without coupling labels, phase labels, or supervision from known critical points. Jointly learn a local coarse-graining operator $C$, low-dimensional theory coordinates $Q$, and a shared renormalization group map $R$ from configuration ensembles.
+  \item Design a joint training framework that combines consistency across ensemble subsets, data geometry across all scales, and one-step and multistep closed-loop constraints to learn finite-scale statistics and their latent-space dynamics.
+  \item Completed prototype experiments with one- and two-dimensional latent coordinates on the one-dimensional transverse-field Ising model, qualitatively observing candidate stable, unstable, and saddle fixed points. Ongoing work investigates two-dimensional Ising systems and the reliable identification of critical behavior.
+\end{itemize}
+
+\vspace{9pt}
+\project{CoEvol-NO: A Neural Operator Transformer with State and Coordinate Co-Evolution}
+  {Jan. 2025 -- Jun. 2026}
+\begin{itemize}
+  \item Proposed an architecture that jointly evolves states and coordinates to address the trade-off between preserving geometric detail and retaining memory of long-term physical evolution in neural operators.
+  \item Introduced a classical predictor-corrector paradigm that combines explicit target prediction with error-driven exact gradient correction, enabling the joint evolution of latent variables and mesh sequences.
+  \item Proved that the architecture has strictly linear $\mathcal{O}(N)$ time complexity and that its exact gradient correction mechanism overcomes the instability of conventional residual updates under first-order approximation.
+  \item Achieved state-of-the-art performance on industrial-scale fluid simulation tasks, including Shape-Net Car and AirfRANS, as well as standard benchmarks such as Navier--Stokes.
+\end{itemize}
+
+\vspace{9pt}
+\project{QuanONet: Quantum Neural Operators with Theoretical Expressivity Advantages}
+  {Dec. 2024 -- Apr. 2026}
+\begin{itemize}
+  \item Proposed QuanONet, the first quantum neural operator framework for the NISQ era, representing continuous nonlinear mappings as the Frobenius inner product between branch-modulated observables and a trunk density matrix.
+  \item Extended the operator universal approximation theorem to the quantum setting and proved that the density matrix implicitly constructs a quadratic feature frame, surpassing the linear capacity limit of classical models to achieve $\mathcal{O}(p^2)$ expressive capacity.
+  \item Introduced a trainable-frequency (TF) embedding strategy that adaptively aligns with the dominant eigenfeatures of the output covariance operator, substantially improving the capture of broadband dynamics.
+  \item Demonstrated strong optimization robustness in high-dimensional scaling regimes and validated the framework on real IBM superconducting quantum processors.
+\end{itemize}
+
+\end{document}

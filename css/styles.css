@@ -1,10 +1,61 @@
 /* css/styles.css */
-.avatar {
+#profile .avatar {
     width: 270px;
     height: 350px;
     object-fit: cover; /* 确保图片内容适应容器大小 */
   }
   
-  .rounded {
+  #profile .rounded {
     border-radius: 15px; /* 设置圆角 */
   }
+
+#profile .portrait-title h2 {
+  font-size: 1.5em;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 0.4rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.news-list time {
+  opacity: 0.72;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.personal-background {
+  margin: 1.25rem 0;
+  font-size: 0.875rem;
+}
+
+.personal-background summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.personal-background p {
+  margin-top: 0.65rem;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.45rem;
+}
+
+@media (max-width: 575.98px) {
+  .news-list li {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+}

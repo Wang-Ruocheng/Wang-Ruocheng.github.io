@@ -1,0 +1,25 @@
+{
+  "name": "Ruocheng Wang",
+  "name_zh": "王若丞",
+  "email": "ignite@sjtu.edu.cn",
+  "site_url": "https://wang-ruocheng.github.io",
+  "role": "PhD Student in Computer Science",
+  "institution": "School of Artificial Intelligence, Shanghai Jiao Tong University",
+  "affiliation": "Shanghai Innovation Institute (SII)",
+  "supervisor": "Junchi Yan",
+  "supervisor_url": "https://thinklab.sjtu.edu.cn",
+  "phd_start": 2025,
+  "bsc_start": 2019,
+  "bsc_end": 2025,
+  "bsc_institution": "Zhiyuan College, Shanghai Jiao Tong University",
+  "bsc_subject": "Physics",
+  "cv_source": "output/pdf/Ruocheng_Wang_CV_English.pdf",
+  "research_interests": ["Quantum Algorithms", "Machine Learning", "PDE Solving", "Quantum Chemistry"],
+  "internship": {
+    "message": "I am currently seeking PhD research internship opportunities.",
+    "start": null,
+    "duration": null,
+    "directions": []
+  },
+  "updated": "2026-10-23"
+}
